@@ -6,7 +6,7 @@ normalizedName := "scalajs-d3"
 
 organization := "org.singlespaced"
 
-scalaVersion := "2.12.0"
+scalaVersion := "2.12.6"
 
 scalacOptions ++= Seq("-deprecation", "-feature")
 
@@ -41,10 +41,6 @@ pomExtra := (
       </developer>
     </developers>)
 
+publishTo := Some("releases" at "http://artifactory.n-side.be:8080/artifactory/simple/libs-release-local/")
+
 publishMavenStyle := true
-
-releasePublishArtifactsAction := PgpKeys.publishSigned.value
-
-useGpg := true
-
-//bintray.Keys.repository := "maven"
